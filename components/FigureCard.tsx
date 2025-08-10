@@ -38,7 +38,7 @@ const FigureCard: React.FC<FigureCardProps> = ({ figure }) => {
             />
             {/* ფონი თუ ფოტო არ არსებობს */}
             <div className="absolute inset-0 bg-gradient-to-br from-brand-chocolate/30 to-brand-gold/20 flex items-center justify-center">
-              <div className="text-6xl text-brand-gold/50">📚</div>
+              <div className="text-4xl text-brand-gold/30">🕰️</div>
             </div>
           </div>
           
