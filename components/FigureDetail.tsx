@@ -80,9 +80,7 @@ const FigureDetail: React.FC = () => {
           }}
         />
         {/* ფონი თუ ფოტო არ არსებობს */}
-        <div className="w-full h-full bg-gradient-to-br from-brand-chocolate/40 to-brand-gold/20 flex items-center justify-center">
-          <div className="text-5xl text-brand-gold/30">🕰️</div>
-        </div>
+        <div className="w-full h-full bg-gradient-to-br from-brand-chocolate/40 to-brand-gold/20"></div>
       </motion.div>
 
       <motion.div 
@@ -113,9 +111,7 @@ const FigureDetail: React.FC = () => {
                       }}
                   />
                   {/* ფონი თუ ფოტო არ არსებობს */}
-                  <div className="w-24 h-32 bg-gradient-to-br from-brand-chocolate/30 to-brand-gold/20 rounded-md border-2 border-brand-gold/50 flex items-center justify-center flex-shrink-0">
-                    <div className="text-xl text-brand-gold/30">🕰️</div>
-                  </div>
+                  <div className="w-24 h-32 bg-gradient-to-br from-brand-chocolate/30 to-brand-gold/20 rounded-md border-2 border-brand-gold/50 flex-shrink-0"></div>
                   <div>
                     <h2 className="text-3xl font-bold text-white">{content.name}</h2>
                     <p className="text-brand-gold">{content.title}</p>
