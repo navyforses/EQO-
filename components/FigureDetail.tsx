@@ -45,6 +45,11 @@ const FigureDetail: React.FC = () => {
     if (newIndex === activePageIndex || newIndex < 0 || newIndex >= totalPages) return;
     setDirection(newIndex > activePageIndex ? 1 : -1);
     setActivePageIndex(newIndex);
+    
+    // Debug: Log video URL when changing to video page
+    if (newIndex > 0 && content.videoUrls?.[newIndex - 1]) {
+      console.log(`Video ${newIndex} URL:`, content.videoUrls[newIndex - 1]);
+    }
   };
   
   const buttonBaseClass = `flex items-center gap-2 px-3 py-1.5 rounded-md transition-all duration-300 border border-brand-aged-gold/50 text-brand-aged-gold hover:bg-brand-aged-gold/10 bg-brand-aged-paper/30`;
@@ -121,6 +126,7 @@ const FigureDetail: React.FC = () => {
                     {activePageIndex > 0 && content.videoUrls?.[activePageIndex - 1] && (
                       <div className="w-full h-full bg-brand-aged-paper/50 rounded-lg p-4 flex flex-col border border-brand-aged-gold/30">
                         <h3 className={`text-xl font-bold text-gray-800 mb-4 ${fontClass}`}>{t('watchVideo')} #{activePageIndex}</h3>
+                        <div className="text-xs text-gray-600 mb-2">Debug: {content.videoUrls[activePageIndex - 1]}</div>
                         <div className="w-full h-full rounded-lg overflow-hidden border border-brand-aged-gold/20">
                           <iframe
                             className="w-full h-full"
