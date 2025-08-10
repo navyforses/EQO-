@@ -54,8 +54,8 @@ const Chat: React.FC<ChatProps> = ({ figure }) => {
   };
 
   return (
-    <div className={`h-full flex flex-col bg-black/20 rounded-lg border border-brand-gold/20 p-4 ${fontClass}`}>
-      <div className="flex items-center gap-2 mb-4 pb-2 border-b border-brand-gold/30">
+    <div className={`h-full flex flex-col bg-black/20 rounded-lg p-4 ${fontClass}`}>
+              <div className="flex items-center gap-2 mb-4 pb-2">
         <div className="text-brand-gold">
             <ChatBubbleIcon />
         </div>
@@ -87,7 +87,7 @@ const Chat: React.FC<ChatProps> = ({ figure }) => {
           onChange={(e) => setInput(e.target.value)}
           onKeyPress={handleKeyPress}
           placeholder={t('chatPlaceholder')}
-          className="flex-grow bg-gray-800 border border-brand-gold/50 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-brand-gold transition-all text-white"
+                      className="flex-grow bg-gray-800 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-brand-gold transition-all text-white"
           disabled={isLoading}
         />
         <button

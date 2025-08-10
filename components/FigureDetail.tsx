@@ -118,7 +118,7 @@ const FigureDetail: React.FC = () => {
                     <p className="text-gray-400 text-sm">{content.era}</p>
                   </div>
               </div>
-              <h3 className="text-2xl font-bold text-white border-b border-brand-gold/30 pb-2">{t('bioTitle')}</h3>
+              <h3 className="text-2xl font-bold text-white pb-2">{t('bioTitle')}</h3>
               <p className="leading-relaxed">{content.bio}</p>
             </div>
 
@@ -138,7 +138,7 @@ const FigureDetail: React.FC = () => {
                   >
                     {activePageIndex === 0 && <Chat figure={figure} />}
                     {activePageIndex > 0 && content.videoUrls?.[activePageIndex - 1] && (
-                      <div className="w-full h-full bg-black/20 rounded-lg border border-brand-gold/20 p-4 flex flex-col">
+                      <div className="w-full h-full bg-black/20 rounded-lg p-4 flex flex-col">
                         <h3 className={`text-xl font-bold text-white mb-4 ${fontClass}`}>{t('watchVideo')} #{activePageIndex}</h3>
                         <div className="w-full h-full rounded-lg overflow-hidden">
                           <iframe
@@ -157,7 +157,7 @@ const FigureDetail: React.FC = () => {
               </div>
 
               {/* Page turn controls */}
-              <div className="flex justify-between items-center gap-2 mt-4 pt-2 border-t border-brand-gold/20">
+              <div className="flex justify-between items-center gap-2 mt-4 pt-2">
                   <button
                       onClick={() => handlePageChange(activePageIndex - 1)}
                       disabled={activePageIndex === 0}
