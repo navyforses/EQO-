@@ -75,7 +75,7 @@ export const historicalFigures: HistoricalFigure[] = [
       era: 'XIX-XX საუკუნე',
       videoUrls: [
         'https://youtu.be/ohfFiz-Tm_U?si=6UMdq7FlEQ2q_VbT',
-        'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
+        'https://youtu.be/ohfFiz-Tm_U?si=6UMdq7FlEQ2q_VbT=1 ',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3',
       ],
