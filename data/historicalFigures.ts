@@ -4,7 +4,7 @@ export const historicalFigures: HistoricalFigure[] = [
   {
     id: '1',
     century: [19, 20],
-    image: 'https://picsum.photos/seed/ilia/400/500',
+    image: '/images/1.jpg',
     ge: {
       name: 'ილია ჭავჭავაძე',
       title: 'თერგდალეულების მეთაური',
@@ -35,7 +35,7 @@ export const historicalFigures: HistoricalFigure[] = [
   {
     id: '2',
     century: [19, 20],
-    image: 'https://picsum.photos/seed/vazha/400/500',
+    image: '/images/2.jpg',
     ge: {
       name: 'ვაჟა-ფშაველა',
       title: 'ქართული პოეზიის კლასიკოსი',
@@ -66,7 +66,7 @@ export const historicalFigures: HistoricalFigure[] = [
   {
     id: '3',
     century: [19, 20],
-    image: 'https://gdb.rferl.org/03190000-0aff-0242-45de-08dabe175217_w1023_r1_s.jpg',
+    image: '/images/3.jpg',
     ge: {
       name: 'ნიკო ნიკოლაძე',
       title: 'პროგრესული მოაზროვნე',
@@ -97,7 +97,7 @@ export const historicalFigures: HistoricalFigure[] = [
   {
     id: 'shota-rustaveli',
     century: [12],
-    image: 'https://picsum.photos/seed/shota/400/500',
+    image: '/images/5.jpg',
     ge: {
       name: 'შოთა რუსთაველი',
       title: 'ვეფხისტყაოსნის ავტორი',
