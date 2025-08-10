@@ -128,7 +128,7 @@ export const historicalFigures: HistoricalFigure[] = [
   {
     id: 'david-agmashenebeli',
     century: [11, 12],
-    image: 'https://picsum.photos/seed/david/400/500',
+    image: '/images/5.jpg',
     ge: {
       name: 'დავით აღმაშენებელი',
       title: 'საქართველოს უდიდესი მეფე',
