@@ -69,7 +69,7 @@ const FigureDetail: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.5 }}
-        className="w-full h-20 mb-6 rounded-lg overflow-hidden border-2 border-brand-gold/30 shadow-lg"
+        className="w-full h-20 mb-6 rounded-lg overflow-hidden shadow-lg"
       >
         <img 
           src={`/EQO-/images/${figure.id}.jpg`} 
@@ -86,7 +86,7 @@ const FigureDetail: React.FC = () => {
       <motion.div 
         layoutId={`book-wrapper-${figure.id}`}
         transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
-        className="bg-brand-parchment/5 rounded-lg shadow-2xl p-4 md:p-8 flex flex-col lg:flex-row gap-8 relative overflow-hidden border border-brand-gold/20 flex-grow"
+        className="bg-brand-parchment/5 rounded-lg shadow-2xl p-4 md:p-8 flex flex-col lg:flex-row gap-8 relative overflow-hidden flex-grow"
       >
         <motion.div 
             initial={{ opacity: 0 }}
@@ -104,14 +104,14 @@ const FigureDetail: React.FC = () => {
                       layoutId={`book-image-${figure.id}`}
                       src={`/EQO-/images/${figure.id}.jpg`} 
                       alt={content.name} 
-                      className="w-24 h-32 object-cover bg-black/20 rounded-md border-2 border-brand-gold/50 flex-shrink-0" 
+                      className="w-24 h-32 object-cover bg-black/20 rounded-md flex-shrink-0" 
                       onError={(e) => {
                         // თუ ფოტო არ არსებობს, ვაჩენთ ფონს
                         e.currentTarget.style.display = 'none';
                       }}
                   />
                   {/* ფონი თუ ფოტო არ არსებობს */}
-                  <div className="w-24 h-32 bg-gradient-to-br from-brand-chocolate/30 to-brand-gold/20 rounded-md border-2 border-brand-gold/50 flex-shrink-0"></div>
+                  <div className="w-24 h-32 bg-gradient-to-br from-brand-chocolate/30 to-brand-gold/20 rounded-md flex-shrink-0"></div>
                   <div>
                     <h2 className="text-3xl font-bold text-white">{content.name}</h2>
                     <p className="text-brand-gold">{content.title}</p>

@@ -20,7 +20,7 @@ const FigureCard: React.FC<FigureCardProps> = ({ figure }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       whileHover={{ scale: 1.02 }}
-      className={`bg-brand-chocolate/10 border border-brand-gold/30 rounded-lg p-6 hover:border-brand-gold/60 transition-all duration-300 ${fontClass}`}
+      className={`bg-brand-chocolate/10 rounded-lg p-6 transition-all duration-300 ${fontClass}`}
     >
       <Link to={`/figure/${figure.id}`} className="block">
         <div className="space-y-4">
