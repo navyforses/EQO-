@@ -11,19 +11,32 @@ const AppLogo: React.FC<{ className?: string }> = ({ className = 'h-32 w-32' }) 
     strokeLinejoin="round" 
     className={className}
   >
-    {/* Book shape */}
-    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+    {/* Hourglass shape */}
+    {/* Top triangle */}
+    <path d="M6 2h12l-2 4h-8z" fill="currentColor" opacity="0.9"/>
     
-    {/* Echo / Soundwave inside book */}
-    <path d="M6 8.5c.5.5 1.5.5 2 0"></path>
-    <path d="M5 11.5c1.5 1.5 3.5 1.5 5 0"></path>
-    <path d="M4 14.5c2.5 2.5 5.5 2.5 8 0"></path>
+    {/* Bottom triangle */}
+    <path d="M6 22h12l-2-4h-8z" fill="currentColor" opacity="0.9"/>
     
-    {/* Mirrored echo */}
-    <path d="M18 8.5c-.5.5-1.5.5-2 0"></path>
-    <path d="M19 11.5c-1.5 1.5-3.5 1.5-5 0"></path>
-    <path d="M20 14.5c-2.5 2.5-5.5 2.5-8 0"></path>
+    {/* Center connection */}
+    <line x1="12" y1="6" x2="12" y2="18" stroke="currentColor" strokeWidth="0.5"/>
+    
+    {/* Concentric circles around hourglass */}
+    <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="0.3" opacity="0.6"/>
+    <circle cx="12" cy="12" r="6" stroke="currentColor" strokeWidth="0.3" opacity="0.7"/>
+    <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="0.3" opacity="0.8"/>
+    
+    {/* Sand grains in top chamber */}
+    <circle cx="10" cy="4" r="0.3" fill="currentColor" opacity="0.8"/>
+    <circle cx="14" cy="4" r="0.3" fill="currentColor" opacity="0.8"/>
+    <circle cx="11" cy="5" r="0.2" fill="currentColor" opacity="0.6"/>
+    <circle cx="13" cy="5" r="0.2" fill="currentColor" opacity="0.6"/>
+    
+    {/* Sand grains in bottom chamber */}
+    <circle cx="10" cy="20" r="0.3" fill="currentColor" opacity="0.8"/>
+    <circle cx="14" cy="20" r="0.3" fill="currentColor" opacity="0.8"/>
+    <circle cx="11" cy="19" r="0.2" fill="currentColor" opacity="0.6"/>
+    <circle cx="13" cy="19" r="0.2" fill="currentColor" opacity="0.6"/>
   </svg>
 );
 
