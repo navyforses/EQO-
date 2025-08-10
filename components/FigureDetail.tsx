@@ -72,7 +72,7 @@ const FigureDetail: React.FC = () => {
         className="w-full h-64 mb-6 rounded-lg overflow-hidden border-2 border-brand-gold/30 shadow-lg"
       >
         <img 
-          src={`/images/${figure.id}.jpg`} 
+          src={`/EQO-/images/${figure.id}.jpg`} 
           alt={content.name}
           className="w-full h-full object-cover"
           onError={(e) => {
@@ -104,7 +104,7 @@ const FigureDetail: React.FC = () => {
               <div className="flex items-start gap-4">
                   <motion.img 
                       layoutId={`book-image-${figure.id}`}
-                      src={`/images/${figure.id}.jpg`} 
+                      src={`/EQO-/images/${figure.id}.jpg`} 
                       alt={content.name} 
                       className="w-24 h-32 object-cover bg-black/20 rounded-md border-2 border-brand-gold/50 flex-shrink-0" 
                       onError={(e) => {

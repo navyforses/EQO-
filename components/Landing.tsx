@@ -65,7 +65,7 @@ const Landing: React.FC = () => {
         <div className="animate-fade-in-up space-y-6">
           {/* თქვენი ფოტოს გამოსაყენებლად გაუშვით CustomLogo კომპონენტი */}
           {/* <AppLogo className="h-32 w-32 mx-auto text-brand-gold" /> */}
-          <CustomLogo className="h-32 w-32 mx-auto" imagePath="/logo.png" altText="EQO+ Custom Logo" />
+          <CustomLogo className="h-32 w-32 mx-auto" imagePath="/EQO-/logo.png" altText="EQO+ Custom Logo" />
           <h1 className="text-5xl md:text-7xl font-bold text-brand-gold tracking-wider" style={{ textShadow: '2px 2px 8px rgba(255, 215, 0, 0.4)' }}>
             {t('appTitle')}
           </h1>

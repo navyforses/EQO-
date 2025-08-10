@@ -8,7 +8,7 @@ interface CustomLogoProps {
 
 const CustomLogo: React.FC<CustomLogoProps> = ({ 
   className = 'h-32 w-32', 
-  imagePath = '/logo.png',
+  imagePath = '/EQO-/logo.png',
   altText = 'EQO+ Logo'
 }) => {
   return (

@@ -28,7 +28,7 @@ const FigureCard: React.FC<FigureCardProps> = ({ figure }) => {
           <div className="relative h-48 bg-gradient-to-br from-brand-chocolate/20 to-brand-gold/10 rounded-lg overflow-hidden">
             {/* თქვენი ფოტო აქ */}
             <img 
-              src={`/images/${figure.id}.jpg`} 
+              src={`/EQO-/images/${figure.id}.jpg`} 
               alt={content.name}
               className="w-full h-full object-cover"
               onError={(e) => {
