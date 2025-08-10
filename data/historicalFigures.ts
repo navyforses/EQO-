@@ -74,7 +74,7 @@ export const historicalFigures: HistoricalFigure[] = [
       bio: 'ნიკო ნიკოლაძე იყო პროგრესული იდეების მატარებელი, რომელმაც მნიშვნელოვანი წვლილი შეიტანა საქართველოს ეკონომიკურ და სოციალურ განვითარებაში. იგი იბრძოდა ქვეყნის მოდერნიზაციისა და ევროპულ ღირებულებებთან დაახლოებისთვის.',
       era: 'XIX-XX საუკუნე',
       videoUrls: [
-        'https://www.youtube.com/embed/dQw4w9WgXcQ?v=0',
+        'https://youtu.be/ohfFiz-Tm_U?si=6UMdq7FlEQ2q_VbT',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3',
