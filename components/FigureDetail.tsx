@@ -69,7 +69,7 @@ const FigureDetail: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.5 }}
-        className="w-full h-64 mb-6 rounded-lg overflow-hidden border-2 border-brand-gold/30 shadow-lg"
+        className="w-full h-20 mb-6 rounded-lg overflow-hidden border-2 border-brand-gold/30 shadow-lg"
       >
         <img 
           src={`/EQO-/images/${figure.id}.jpg`} 
