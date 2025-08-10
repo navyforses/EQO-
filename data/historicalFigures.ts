@@ -2,7 +2,7 @@ import type { HistoricalFigure } from '../types';
 
 export const historicalFigures: HistoricalFigure[] = [
   {
-    id: 'ilia-chavchavadze',
+    id: '1',
     century: [19, 20],
     image: 'https://picsum.photos/seed/ilia/400/500',
     ge: {
@@ -33,7 +33,7 @@ export const historicalFigures: HistoricalFigure[] = [
     }
   },
   {
-    id: 'vazha-pshavela',
+    id: '2',
     century: [19, 20],
     image: 'https://picsum.photos/seed/vazha/400/500',
     ge: {
@@ -64,7 +64,7 @@ export const historicalFigures: HistoricalFigure[] = [
     }
   },
   {
-    id: 'niko-nikoladze',
+    id: '3',
     century: [19, 20],
     image: 'https://gdb.rferl.org/03190000-0aff-0242-45de-08dabe175217_w1023_r1_s.jpg',
     ge: {

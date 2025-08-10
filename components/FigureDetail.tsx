@@ -64,6 +64,27 @@ const FigureDetail: React.FC = () => {
                 <span className={fontClass}>{t('backToLibrary')}</span>
             </Link>
         </motion.div>
+      {/* დიდი ფოტო გვერდის ზემოთ */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+        className="w-full h-64 mb-6 rounded-lg overflow-hidden border-2 border-brand-gold/30 shadow-lg"
+      >
+        <img 
+          src={`/images/${figure.id}.jpg`} 
+          alt={content.name}
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            e.currentTarget.style.display = 'none';
+          }}
+        />
+        {/* ფონი თუ ფოტო არ არსებობს */}
+        <div className="w-full h-full bg-gradient-to-br from-brand-chocolate/40 to-brand-gold/20 flex items-center justify-center">
+          <div className="text-6xl text-brand-gold/50">📚</div>
+        </div>
+      </motion.div>
+
       <motion.div 
         layoutId={`book-wrapper-${figure.id}`}
         transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
@@ -83,10 +104,18 @@ const FigureDetail: React.FC = () => {
               <div className="flex items-start gap-4">
                   <motion.img 
                       layoutId={`book-image-${figure.id}`}
-                      src={figure.image} 
+                      src={`/images/${figure.id}.jpg`} 
                       alt={content.name} 
-                      className="w-24 h-32 object-contain bg-black/20 rounded-md border-2 border-brand-gold/50 flex-shrink-0" 
+                      className="w-24 h-32 object-cover bg-black/20 rounded-md border-2 border-brand-gold/50 flex-shrink-0" 
+                      onError={(e) => {
+                        // თუ ფოტო არ არსებობს, ვაჩენთ ფონს
+                        e.currentTarget.style.display = 'none';
+                      }}
                   />
+                  {/* ფონი თუ ფოტო არ არსებობს */}
+                  <div className="w-24 h-32 bg-gradient-to-br from-brand-chocolate/30 to-brand-gold/20 rounded-md border-2 border-brand-gold/50 flex items-center justify-center flex-shrink-0">
+                    <div className="text-2xl text-brand-gold/50">📚</div>
+                  </div>
                   <div>
                     <h2 className="text-3xl font-bold text-white">{content.name}</h2>
                     <p className="text-brand-gold">{content.title}</p>
