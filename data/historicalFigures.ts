@@ -74,7 +74,7 @@ export const historicalFigures: HistoricalFigure[] = [
       bio: 'ნიკო ნიკოლაძე იყო პროგრესული იდეების მატარებელი, რომელმაც მნიშვნელოვანი წვლილი შეიტანა საქართველოს ეკონომიკურ და სოციალურ განვითარებაში. იგი იბრძოდა ქვეყნის მოდერნიზაციისა და ევროპულ ღირებულებებთან დაახლოებისთვის.',
       era: 'XIX-XX საუკუნე',
       videoUrls: [
-        'https://www.youtube.com/embed/dQw4w9WgXcQ?v=0',
+        'https://www.youtube.com/embed/ohfFiz-Tm_U?si=6UMdq7FlEQ2q_VbT',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3',
@@ -87,7 +87,7 @@ export const historicalFigures: HistoricalFigure[] = [
       bio: 'Niko Nikoladze was a carrier of progressive ideas who made a significant contribution to the economic and social development of Georgia. He fought for the country\'s modernization and rapprochement with European values.',
       era: '19th-20th Century',
       videoUrls: [
-        'https://www.youtube.com/embed/dQw4w9WgXcQ?v=0',
+        'https://www.youtube.com/embed/ohfFiz-Tm_U?si=6UMdq7FlEQ2q_VbT',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3',
