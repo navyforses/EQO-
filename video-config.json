@@ -1,0 +1,44 @@
+{
+  "videos": {
+    "1": {
+      "name": "ილია ჭავჭავაძე / Ilia Chavchavadze",
+      "video1": "https://www.youtube.com/embed/ehI2ceiuhnM",
+      "video2": "https://www.youtube.com/embed/dQw4w9WgXcQ?v=1",
+      "video3": "https://www.youtube.com/embed/dQw4w9WgXcQ?v=2",
+      "video4": "https://www.youtube.com/embed/dQw4w9WgXcQ?v=3"
+    },
+    "2": {
+      "name": "ვაჟა-ფშაველა / Vazha-Pshavela",
+      "video1": "https://www.youtube.com/embed/dQw4w9WgXcQ?v=0",
+      "video2": "https://www.youtube.com/embed/dQw4w9WgXcQ?v=1",
+      "video3": "https://www.youtube.com/embed/dQw4w9WgXcQ?v=2",
+      "video4": "https://www.youtube.com/embed/dQw4w9WgXcQ?v=3"
+    },
+    "3": {
+      "name": "ნიკო ნიკოლაძე / Niko Nikoladze",
+      "video1": "https://www.youtube.com/embed/ohfFiz-Tm_U?si=6UMdq7FlEQ2q_VbT",
+      "video2": "https://www.youtube.com/embed/dQw4w9WgXcQ?v=1",
+      "video3": "https://www.youtube.com/embed/dQw4w9WgXcQ?v=2",
+      "video4": "https://www.youtube.com/embed/dQw4w9WgXcQ?v=3"
+    },
+    "shota-rustaveli": {
+      "name": "შოთა რუსთაველი / Shota Rustaveli",
+      "video1": "https://www.youtube.com/embed/dQw4w9WgXcQ?v=0",
+      "video2": "https://www.youtube.com/embed/dQw4w9WgXcQ?v=1",
+      "video3": "https://www.youtube.com/embed/dQw4w9WgXcQ?v=2",
+      "video4": "https://www.youtube.com/embed/dQw4w9WgXcQ?v=3"
+    },
+    "david-agmashenebeli": {
+      "name": "დავით აღმაშენებელი / David the Builder",
+      "video1": "https://www.youtube.com/embed/dQw4w9WgXcQ?v=0",
+      "video2": "https://www.youtube.com/embed/dQw4w9WgXcQ?v=1",
+      "video3": "https://www.youtube.com/embed/dQw4w9WgXcQ?v=2",
+      "video4": "https://www.youtube.com/embed/dQw4w9WgXcQ?v=3"
+    }
+  },
+  "instructions": {
+    "how_to_add_video": "1. იპოვეთ სასურველი პიროვნება (1, 2, 3, shota-rustaveli, david-agmashenebeli)",
+    "how_to_convert_link": "2. YouTube ლინკი: https://www.youtube.com/watch?v=VIDEO_ID → https://www.youtube.com/embed/VIDEO_ID",
+    "example": "3. მაგალითი: https://www.youtube.com/watch?v=abc123 → https://www.youtube.com/embed/abc123"
+  }
+}
