@@ -54,24 +54,32 @@ const Chat: React.FC<ChatProps> = ({ figure }) => {
   };
 
   return (
-    <div className={`h-full flex flex-col bg-black/20 rounded-lg p-4 ${fontClass}`}>
-              <div className="flex items-center gap-2 mb-4 pb-2">
-        <div className="text-brand-gold">
+    <div className={`h-full flex flex-col bg-brand-aged-paper/60 rounded-lg p-4 border border-brand-aged-gold/40 ${fontClass} relative overflow-hidden`}>
+      {/* Ornamental border */}
+      <div className="absolute inset-0 ornamental-border opacity-10 pointer-events-none"></div>
+      
+      <div className="flex items-center gap-2 mb-4 pb-2 border-b border-brand-aged-gold/30 relative z-10">
+        <div className="text-brand-aged-gold">
             <ChatBubbleIcon />
         </div>
-        <h3 className="text-xl font-bold text-white">{t('chatWith')} {content.name}</h3>
+        <h3 className="text-xl font-bold text-gray-800">{t('chatWith')} {content.name}</h3>
       </div>
-      <div className="flex-grow overflow-y-auto pr-2 space-y-4">
+      
+      <div className="flex-grow overflow-y-auto pr-2 space-y-4 relative z-10">
         {messages.map((msg, index) => (
           <div key={index} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-            <div className={`max-w-xs md:max-w-md lg:max-w-lg px-4 py-2 rounded-lg ${msg.sender === 'user' ? 'bg-brand-chocolate text-white' : 'bg-gray-700 text-gray-200'}`}>
+            <div className={`max-w-xs md:max-w-md lg:max-w-lg px-4 py-2 rounded-lg border ${
+              msg.sender === 'user' 
+                ? 'bg-brand-aged-gold/20 text-gray-800 border-brand-aged-gold/40' 
+                : 'bg-brand-aged-paper/80 text-gray-700 border-brand-aged-gold/30'
+            }`}>
               <p className="whitespace-pre-wrap">{msg.text}</p>
             </div>
           </div>
         ))}
         {isLoading && (
             <div className="flex justify-start">
-                 <div className="bg-gray-700 text-gray-200 rounded-lg px-4 py-2 flex items-center gap-2">
+                 <div className="bg-brand-aged-paper/80 text-gray-700 rounded-lg px-4 py-2 flex items-center gap-2 border border-brand-aged-gold/30">
                     <SpinnerIcon />
                     <span>...</span>
                 </div>
@@ -79,21 +87,23 @@ const Chat: React.FC<ChatProps> = ({ figure }) => {
         )}
         <div ref={messagesEndRef} />
       </div>
-      {error && <p className="text-red-400 text-sm my-2">{error}</p>}
-      <div className="mt-4 flex gap-2">
+      
+      {error && <p className="text-red-600 text-sm my-2 relative z-10">{error}</p>}
+      
+      <div className="mt-4 flex gap-2 relative z-10">
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyPress={handleKeyPress}
           placeholder={t('chatPlaceholder')}
-                      className="flex-grow bg-gray-800 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-brand-gold transition-all text-white"
+          className="flex-grow bg-brand-aged-paper/80 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-brand-aged-gold transition-all text-gray-800 border border-brand-aged-gold/30 placeholder-gray-500"
           disabled={isLoading}
         />
         <button
           onClick={handleSend}
           disabled={isLoading || input.trim() === ''}
-          className="bg-brand-gold text-black font-bold px-6 py-2 rounded-md hover:bg-opacity-90 transition-colors disabled:bg-gray-500 disabled:cursor-not-allowed"
+          className="bg-brand-aged-gold text-gray-800 font-bold px-6 py-2 rounded-md hover:bg-brand-gold transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed border border-brand-aged-gold/50"
         >
           {isLoading ? '...' : 'Send'}
         </button>

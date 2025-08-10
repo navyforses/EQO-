@@ -13,9 +13,16 @@ const AppContent: React.FC = () => {
     const isLandingPage = location.pathname === '/';
 
     return (
-        <div className="bg-black text-white h-screen flex flex-col font-serif-en">
+        <div className="aged-paper-bg text-gray-800 h-screen flex flex-col font-serif-en relative overflow-hidden">
+            {/* Ornamental background elements */}
+            <div className="absolute inset-0 ornamental-border opacity-20 pointer-events-none"></div>
+            <div className="absolute top-4 left-4 ornamental-corner opacity-30"></div>
+            <div className="absolute top-4 right-4 ornamental-corner opacity-30" style={{transform: 'scaleX(-1)'}}></div>
+            <div className="absolute bottom-4 left-4 ornamental-corner opacity-30" style={{transform: 'scaleY(-1)'}}></div>
+            <div className="absolute bottom-4 right-4 ornamental-corner opacity-30" style={{transform: 'scale(-1)'}}></div>
+            
             {!isLandingPage && <Header />}
-            <main className={`container mx-auto px-4 ${isLandingPage ? 'h-screen' : 'flex-grow overflow-y-auto'}`}>
+            <main className={`container mx-auto px-4 relative z-10 ${isLandingPage ? 'h-screen' : 'flex-grow overflow-y-auto'}`}>
                 <AnimatePresence mode="wait">
                     <Routes location={location} key={location.pathname}>
                         <Route path="/" element={<Landing />} />

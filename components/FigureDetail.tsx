@@ -26,7 +26,6 @@ const pageVariants = {
   }),
 };
 
-
 const FigureDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { language, t } = useLocale();
@@ -48,7 +47,7 @@ const FigureDetail: React.FC = () => {
     setActivePageIndex(newIndex);
   };
   
-  const buttonBaseClass = `flex items-center gap-2 px-3 py-1.5 rounded-md transition-all duration-300 border border-brand-gold/50 text-brand-gold hover:bg-brand-gold/10`;
+  const buttonBaseClass = `flex items-center gap-2 px-3 py-1.5 rounded-md transition-all duration-300 border border-brand-aged-gold/50 text-brand-aged-gold hover:bg-brand-aged-gold/10 bg-brand-aged-paper/30`;
   const disabledClass = `disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-transparent`;
 
   return (
@@ -59,67 +58,49 @@ const FigureDetail: React.FC = () => {
         .backface-hidden { backface-visibility: hidden; }
       `}</style>
         <motion.div initial={{opacity:0, y:-20}} animate={{opacity:1, y:0}} transition={{delay: 0.5}}>
-            <Link to="/library" className="inline-flex items-center gap-2 text-brand-gold mb-6 hover:underline">
+            <Link to="/library" className="inline-flex items-center gap-2 text-brand-aged-gold mb-6 hover:underline hover:text-brand-gold transition-colors">
                 <ArrowLeftIcon />
                 <span className={fontClass}>{t('backToLibrary')}</span>
             </Link>
         </motion.div>
-      {/* დიდი ფოტო გვერდის ზემოთ */}
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3, duration: 0.5 }}
-        className="w-full h-20 mb-6 rounded-lg overflow-hidden shadow-lg"
-      >
-        <img 
-          src={`/EQO-/images/${figure.id}.jpg`} 
-          alt={content.name}
-          className="w-full h-full object-cover"
-          onError={(e) => {
-            e.currentTarget.style.display = 'none';
-          }}
-        />
-        {/* ფონი თუ ფოტო არ არსებობს */}
-        <div className="w-full h-full bg-gradient-to-br from-brand-chocolate/40 to-brand-gold/20"></div>
-      </motion.div>
 
       <motion.div 
         layoutId={`book-wrapper-${figure.id}`}
         transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
-        className="bg-brand-parchment/5 rounded-lg shadow-2xl p-4 md:p-8 flex flex-col lg:flex-row gap-8 relative overflow-hidden flex-grow"
+        className="bg-brand-aged-paper/80 rounded-lg shadow-2xl p-4 md:p-8 flex flex-col lg:flex-row gap-8 relative overflow-hidden flex-grow burnt-edge ornamental-corner"
       >
         <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className="w-full h-full flex flex-col lg:flex-row gap-8"
+            className="w-full h-full flex flex-col lg:flex-row gap-8 relative z-10"
         >
             {/* Spine effect */}
-            <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-brand-chocolate/20 hidden lg:block -ml-0.5 z-10"></div>
+            <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-brand-aged-gold/30 hidden lg:block -ml-0.5 z-10"></div>
             
             {/* Left Page: Bio */}
-            <div className={`lg:w-1/2 space-y-4 text-gray-300 ${fontClass} overflow-y-auto pr-4`}>
+            <div className={`lg:w-1/2 space-y-4 text-gray-700 ${fontClass} overflow-y-auto pr-4`}>
               <div className="flex items-start gap-4">
                   <motion.img 
                       layoutId={`book-image-${figure.id}`}
                       src={`/EQO-/images/${figure.id}.jpg`} 
                       alt={content.name} 
-                      className="w-24 h-32 object-cover bg-black/20 rounded-md flex-shrink-0" 
+                      className="w-24 h-32 object-cover bg-brand-aged-gold/20 rounded-md flex-shrink-0 border border-brand-aged-gold/30" 
                       onError={(e) => {
                         // თუ ფოტო არ არსებობს, ვაჩენთ ფონს
                         e.currentTarget.style.display = 'none';
                       }}
                   />
                   {/* ფონი თუ ფოტო არ არსებობს */}
-                  <div className="w-24 h-32 bg-gradient-to-br from-brand-chocolate/30 to-brand-gold/20 rounded-md flex-shrink-0"></div>
+                  <div className="w-24 h-32 bg-gradient-to-br from-brand-aged-gold/30 to-brand-gold/20 rounded-md flex-shrink-0 border border-brand-aged-gold/30"></div>
                   <div>
-                    <h2 className="text-3xl font-bold text-white">{content.name}</h2>
-                    <p className="text-brand-gold">{content.title}</p>
-                    <p className="text-gray-400 text-sm">{content.era}</p>
+                    <h2 className="text-3xl font-bold text-gray-800">{content.name}</h2>
+                    <p className="text-brand-aged-gold font-semibold">{content.title}</p>
+                    <p className="text-gray-600 text-sm">{content.era}</p>
                   </div>
               </div>
-              <h3 className="text-2xl font-bold text-white pb-2">{t('bioTitle')}</h3>
-              <p className="leading-relaxed">{content.bio}</p>
+              <h3 className="text-2xl font-bold text-gray-800 pb-2 border-b border-brand-aged-gold/30">{t('bioTitle')}</h3>
+              <p className="leading-relaxed text-gray-700">{content.bio}</p>
             </div>
 
             {/* Right Page: Flippable Content */}
@@ -138,9 +119,9 @@ const FigureDetail: React.FC = () => {
                   >
                     {activePageIndex === 0 && <Chat figure={figure} />}
                     {activePageIndex > 0 && content.videoUrls?.[activePageIndex - 1] && (
-                      <div className="w-full h-full bg-black/20 rounded-lg p-4 flex flex-col">
-                        <h3 className={`text-xl font-bold text-white mb-4 ${fontClass}`}>{t('watchVideo')} #{activePageIndex}</h3>
-                        <div className="w-full h-full rounded-lg overflow-hidden">
+                      <div className="w-full h-full bg-brand-aged-paper/50 rounded-lg p-4 flex flex-col border border-brand-aged-gold/30">
+                        <h3 className={`text-xl font-bold text-gray-800 mb-4 ${fontClass}`}>{t('watchVideo')} #{activePageIndex}</h3>
+                        <div className="w-full h-full rounded-lg overflow-hidden border border-brand-aged-gold/20">
                           <iframe
                             className="w-full h-full"
                             src={content.videoUrls[activePageIndex - 1]}
@@ -157,7 +138,7 @@ const FigureDetail: React.FC = () => {
               </div>
 
               {/* Page turn controls */}
-              <div className="flex justify-between items-center gap-2 mt-4 pt-2">
+              <div className="flex justify-between items-center gap-2 mt-4 pt-2 border-t border-brand-aged-gold/30">
                   <button
                       onClick={() => handlePageChange(activePageIndex - 1)}
                       disabled={activePageIndex === 0}
@@ -167,7 +148,7 @@ const FigureDetail: React.FC = () => {
                       <span>{t('previousPage')}</span>
                   </button>
                   
-                  <span className={`text-sm text-gray-400 ${fontClass}`}>
+                  <span className={`text-sm text-gray-600 ${fontClass}`}>
                     {t('page')} {activePageIndex + 1} {t('of')} {totalPages}
                   </span>
 
