@@ -1,9 +1,8 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import type { HistoricalFigure } from '../types';
+import { HistoricalFigure } from '../types';
 import { useLocale } from '../hooks/useLocale';
-import BookOpenIcon from './icons/BookOpenIcon';
 import { motion } from 'framer-motion';
 
 interface FigureCardProps {
@@ -16,27 +15,41 @@ const FigureCard: React.FC<FigureCardProps> = ({ figure }) => {
   const fontClass = language === 'ge' ? 'font-serif-ge' : 'font-serif-en';
 
   return (
-    <Link to={`/figure/${figure.id}`} className="group perspective-1000 block">
-      <motion.div
-        layoutId={`book-wrapper-${figure.id}`}
-        transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
-        className="relative w-full aspect-[3/4] transform-style-3d group-hover:rotate-y-10"
-      >
-        <div className="absolute inset-0 bg-brand-chocolate rounded-lg shadow-lg transform rotate-y-5 -translate-x-2"></div>
-        <motion.div 
-            layoutId={`book-image-${figure.id}`}
-            className="absolute inset-0 bg-contain bg-no-repeat bg-center bg-black/30 rounded-lg shadow-2xl overflow-hidden" 
-            style={{ backgroundImage: `url(${figure.image})` }}>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-4">
-            <h3 className={`text-xl font-bold text-white drop-shadow-md ${fontClass}`}>{content.name}</h3>
-            <p className={`text-sm text-brand-gold ${fontClass}`}>{content.title}</p>
-            <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <BookOpenIcon />
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      whileHover={{ scale: 1.02 }}
+      className={`bg-brand-chocolate/10 border border-brand-gold/30 rounded-lg p-6 hover:border-brand-gold/60 transition-all duration-300 ${fontClass}`}
+    >
+      <Link to={`/figure/${figure.id}`} className="block">
+        <div className="space-y-4">
+          {/* თქვენი ფოტოს გამოსაყენებლად */}
+          <div className="relative h-48 bg-gradient-to-br from-brand-chocolate/20 to-brand-gold/10 rounded-lg overflow-hidden">
+            {/* თქვენი ფოტო აქ */}
+            <img 
+              src={`/images/${figure.id}.jpg`} 
+              alt={content.name}
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                // თუ ფოტო არ არსებობს, ვაჩენთ ფონს
+                e.currentTarget.style.display = 'none';
+              }}
+            />
+            {/* ფონი თუ ფოტო არ არსებობს */}
+            <div className="absolute inset-0 bg-gradient-to-br from-brand-chocolate/30 to-brand-gold/20 flex items-center justify-center">
+              <div className="text-6xl text-brand-gold/50">📚</div>
             </div>
           </div>
-        </motion.div>
-      </motion.div>
-    </Link>
+          
+          <div>
+            <h3 className="text-xl font-bold text-brand-gold mb-2">{content.name}</h3>
+            <p className="text-brand-parchment/80 text-sm mb-2">{content.title}</p>
+            <p className="text-brand-parchment/70 text-xs">{content.era}</p>
+          </div>
+        </div>
+      </Link>
+    </motion.div>
   );
 };
 

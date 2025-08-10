@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLocale } from '../hooks/useLocale';
 import AppLogo from './icons/AppLogo';
+import CustomLogo from './icons/CustomLogo';
 
 const Landing: React.FC = () => {
   const { language, t } = useLocale();
@@ -62,7 +63,9 @@ const Landing: React.FC = () => {
       
       <div className="decorative-border max-w-2xl w-full">
         <div className="animate-fade-in-up space-y-6">
+          {/* თქვენი ფოტოს გამოსაყენებლად გაუშვით CustomLogo კომპონენტი */}
           <AppLogo className="h-32 w-32 mx-auto text-brand-gold" />
+          {/* <CustomLogo className="h-32 w-32 mx-auto" imagePath="/your-logo.png" altText="EQO+ Custom Logo" /> */}
           <h1 className="text-5xl md:text-7xl font-bold text-brand-gold tracking-wider" style={{ textShadow: '2px 2px 8px rgba(255, 215, 0, 0.4)' }}>
             {t('appTitle')}
           </h1>
