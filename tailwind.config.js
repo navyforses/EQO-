@@ -7,22 +7,30 @@ export default {
   theme: {
     extend: {
       colors: {
+        'brand-obsidian': '#0A0E1A',
         'brand-gold': '#D4AF37',
-        'brand-aged-gold': '#B8860B',
-        'brand-burnt-paper': '#F5F5DC',
-        'brand-aged-paper': '#F4E4BC',
-        'brand-chocolate': '#8B4513',
-        'brand-parchment': '#F5F5DC',
-        'brand-ornament': '#DAA520',
-        'brand-burnt-edge': '#8B7355',
+        'brand-parchment': '#F4E8D0',
+        'brand-copper': '#B87333',
+        'brand-ink': '#2C1810',
+        'brand-dust': 'rgba(212, 175, 55, 0.1)',
       },
       fontFamily: {
         'serif-ge': ['"Noto Serif Georgian"', 'serif'],
         'serif-en': ['"Merriweather"', 'serif'],
       },
       backgroundImage: {
-        'ornamental-pattern': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-        'aged-texture': "url(\"data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.1'/%3E%3C/svg%3E\")",
+        'noise-texture': "url('/textures/paper-noise.png')",
+        'gradient-radial-dark': 'radial-gradient(ellipse at center, #1a1a2e 0%, #0A0E1A 100%)',
+      }
+      ,animation: {
+        'float': 'float 6s ease-in-out infinite',
+        'dust': 'dust 10s infinite',
+        'page-turn': 'pageTurn 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+        'book-breathe': 'breathe 4s ease-in-out infinite',
+      },
+      boxShadow: {
+        'book': '0 20px 60px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(212, 175, 55, 0.2)',
+        'golden-glow': '0 0 30px rgba(212, 175, 55, 0.3)',
       }
     }
   },
