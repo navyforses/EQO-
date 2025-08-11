@@ -97,7 +97,7 @@ export const historicalFigures: HistoricalFigure[] = [
   {
     id: 'shota-rustaveli',
     century: [12],
-    image: '/images/5.jpg',
+    image: '/images/2.jpg',
     ge: {
       name: 'შოთა რუსთაველი',
       title: 'ვეფხისტყაოსნის ავტორი',
