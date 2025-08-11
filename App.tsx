@@ -13,7 +13,7 @@ const AppContent: React.FC = () => {
     const isLandingPage = location.pathname === '/';
 
     return (
-        <div className="aged-paper-bg text-gray-800 h-screen flex flex-col font-serif-en relative overflow-hidden">
+        <div className="bg-brand-obsidian text-brand-parchment h-screen flex flex-col font-serif-en relative overflow-hidden">
             {/* Ornamental background elements */}
             <div className="absolute inset-0 ornamental-border opacity-20 pointer-events-none"></div>
             <div className="absolute top-4 left-4 ornamental-corner opacity-30"></div>

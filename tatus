@@ -1,0 +1,54 @@
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 46e5f70..1ebd93e 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -2,7 +2,7 @@[m
+ <html lang="en">[m
+   <head>[m
+     <meta charset="UTF-8" />[m
+[31m-    <link rel="icon" type="image/png" href="./public/logo.png" />[m
+[32m+[m[32m    <link rel="icon" type="image/png" href="/EQO-/public/logo.png" />[m
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />[m
+     <title>Echo of Ages: Georgian History Chat</title>[m
+     <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[1mdiff --git a/package.json b/package.json[m
+[1mindex 61eb6ca..ee49a6c 100644[m
+[1m--- a/package.json[m
+[1m+++ b/package.json[m
+[36m@@ -6,6 +6,7 @@[m
+   "scripts": {[m
+     "dev": "vite",[m
+     "build": "vite build",[m
+[32m+[m[32m    "build:gh-pages": "node scripts/build-for-github-pages.js",[m
+     "preview": "vite preview",[m
+     "deploy": "node scripts/deploy.js",[m
+     "deploy:quick": "node scripts/deploy.js '🚀 Quick update'",[m
+[1mdiff --git a/scripts/build-for-github-pages.js b/scripts/build-for-github-pages.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..71dc48b[m
+[1m--- /dev/null[m
+[1m+++ b/scripts/build-for-github-pages.js[m
+[36m@@ -0,0 +1,23 @@[m
+[32m+[m[32mimport { execSync } from 'child_process';[m
+[32m+[m[32mimport fs from 'fs';[m
+[32m+[m[32mimport path from 'path';[m
+[32m+[m
+[32m+[m[32mconsole.log('🚀 Building for GitHub Pages...');[m
+[32m+[m
+[32m+[m[32m// Build the project[m
+[32m+[m[32mexecSync('npm run build', { stdio: 'inherit' });[m
+[32m+[m
+[32m+[m[32m// Read the built index.html[m
+[32m+[m[32mconst indexPath = path.join(process.cwd(), 'dist', 'index.html');[m
+[32m+[m[32mlet htmlContent = fs.readFileSync(indexPath, 'utf8');[m
+[32m+[m
+[32m+[m[32m// Replace relative paths with GitHub Pages paths[m
+[32m+[m[32mhtmlContent = htmlContent.replace(/src="\.\//g, 'src="/EQO-/');[m
+[32m+[m[32mhtmlContent = htmlContent.replace(/href="\.\//g, 'href="/EQO-/');[m
+[32m+[m
+[32m+[m[32m// Write back the modified index.html[m
+[32m+[m[32mfs.writeFileSync(indexPath, htmlContent);[m
+[32m+[m
+[32m+[m[32mconsole.log('✅ Build completed and optimized for GitHub Pages!');[m
+[32m+[m[32mconsole.log('📁 Files are ready in the dist/ directory');[m
+[32m+[m[32mconsole.log('🌐 Deploy to GitHub Pages using: npm run deploy');[m

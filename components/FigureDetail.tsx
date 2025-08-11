@@ -63,7 +63,7 @@ const FigureDetail: React.FC = () => {
         .backface-hidden { backface-visibility: hidden; }
       `}</style>
         <motion.div initial={{opacity:0, y:-20}} animate={{opacity:1, y:0}} transition={{delay: 0.5}}>
-            <Link to="/library" className="inline-flex items-center gap-2 text-brand-aged-gold mb-6 hover:underline hover:text-brand-gold transition-colors">
+            <Link to="/library" className="inline-flex items-center gap-2 text-brand-gold mb-6 hover:underline hover:text-brand-gold/90 transition-colors">
                 <ArrowLeftIcon />
                 <span className={fontClass}>{t('backToLibrary')}</span>
             </Link>
@@ -72,7 +72,7 @@ const FigureDetail: React.FC = () => {
       <motion.div 
         layoutId={`book-wrapper-${figure.id}`}
         transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
-        className="bg-brand-aged-paper/80 rounded-lg shadow-2xl p-4 md:p-8 flex flex-col lg:flex-row gap-8 relative overflow-hidden flex-grow burnt-edge ornamental-corner"
+        className="bg-brand-obsidian/70 rounded-lg shadow-2xl p-4 md:p-8 flex flex-col lg:flex-row gap-8 relative overflow-hidden flex-grow border border-brand-gold/20"
       >
         <motion.div 
             initial={{ opacity: 0 }}
@@ -84,7 +84,7 @@ const FigureDetail: React.FC = () => {
             <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-brand-aged-gold/30 hidden lg:block -ml-0.5 z-10"></div>
             
             {/* Left Page: Bio */}
-            <div className={`lg:w-1/2 space-y-4 text-gray-700 ${fontClass} overflow-y-auto pr-4`}>
+            <div className={`lg:w-1/2 space-y-4 text-brand-parchment ${fontClass} overflow-y-auto pr-4`}>
               <div className="flex items-start gap-4">
                   <motion.img 
                       layoutId={`book-image-${figure.id}`}
@@ -99,13 +99,13 @@ const FigureDetail: React.FC = () => {
                   {/* ფონი თუ ფოტო არ არსებობს */}
                   <div className="w-24 h-32 bg-gradient-to-br from-brand-aged-gold/30 to-brand-gold/20 rounded-md flex-shrink-0 border border-brand-aged-gold/30"></div>
                   <div>
-                    <h2 className="text-3xl font-bold text-gray-800">{content.name}</h2>
-                    <p className="text-brand-aged-gold font-semibold">{content.title}</p>
-                    <p className="text-gray-600 text-sm">{content.era}</p>
+                    <h2 className="text-3xl font-bold text-brand-parchment">{content.name}</h2>
+                    <p className="text-brand-gold font-semibold">{content.title}</p>
+                    <p className="text-brand-parchment/70 text-sm">{content.era}</p>
                   </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-800 pb-2 border-b border-brand-aged-gold/30">{t('bioTitle')}</h3>
-              <p className="leading-relaxed text-gray-700">{content.bio}</p>
+              <h3 className="text-2xl font-bold text-brand-parchment pb-2 border-b border-brand-gold/20">{t('bioTitle')}</h3>
+              <p className="leading-relaxed text-brand-parchment/90">{content.bio}</p>
             </div>
 
             {/* Right Page: Flippable Content */}
@@ -144,11 +144,11 @@ const FigureDetail: React.FC = () => {
               </div>
 
               {/* Page turn controls */}
-              <div className="flex justify-between items-center gap-2 mt-4 pt-2 border-t border-brand-aged-gold/30">
+              <div className="flex justify-between items-center gap-2 mt-4 pt-2 border-t border-brand-gold/20">
                   <button
                       onClick={() => handlePageChange(activePageIndex - 1)}
                       disabled={activePageIndex === 0}
-                      className={`${buttonBaseClass} ${disabledClass} ${fontClass}`}
+                       className={`${buttonBaseClass} ${disabledClass} ${fontClass}`}
                   >
                       <ArrowLeftIcon />
                       <span>{t('previousPage')}</span>

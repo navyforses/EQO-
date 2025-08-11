@@ -58,7 +58,7 @@ const Landing: React.FC = () => {
         }
       `}</style>
       
-      <div className="decorative-border max-w-2xl w-full ornamental-pattern relative overflow-hidden">
+      <div className="decorative-border max-w-2xl w-full relative overflow-hidden bg-brand-obsidian/70 border-brand-gold/40">
         {/* Ornamental corners */}
         <div className="absolute top-4 left-4 w-8 h-8 opacity-30">
           <div className="w-full h-full bg-brand-aged-gold rounded-full"></div>
@@ -77,16 +77,16 @@ const Landing: React.FC = () => {
           {/* თქვენი ფოტოს გამოსაყენებლად გაუშვით CustomLogo კომპონენტი */}
           {/* <AppLogo className="h-32 w-32 mx-auto text-brand-gold" /> */}
           <CustomLogo className="h-32 w-32 mx-auto" imagePath="/EQO-/logo.png" altText="EQO+ Custom Logo" />
-          <h1 className="text-5xl md:text-7xl font-bold text-brand-aged-gold tracking-wider" style={{ textShadow: '2px 2px 8px rgba(212, 175, 55, 0.3)' }}>
+          <h1 className="text-5xl md:text-7xl font-bold text-brand-gold tracking-wider" style={{ textShadow: '0 0 16px rgba(212, 175, 55, 0.3)' }}>
             {t('appTitle')}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-700 italic tracking-wide">
+          <p className="text-xl md:text-2xl text-brand-parchment/80 italic tracking-wide">
             {t('slogan')}
           </p>
           <div className="pt-8">
             <Link
               to="/library"
-              className="inline-block px-10 py-4 text-lg font-semibold text-gray-800 border-2 border-brand-aged-gold/60 rounded-none bg-brand-aged-paper/80 hover:bg-brand-aged-gold hover:text-gray-800 transition-all duration-300 ease-in-out shadow-[0_0_15px_rgba(212,175,55,0.2)] hover:shadow-[0_0_25px_rgba(212,175,55,0.4)] transform hover:scale-105"
+              className="inline-block px-10 py-4 text-lg font-semibold text-brand-ink border-2 border-brand-gold/60 rounded-none bg-brand-gold/90 hover:bg-brand-gold text-gray-900 transition-all duration-300 ease-in-out shadow-[0_0_15px_rgba(212,175,55,0.2)] hover:shadow-golden-glow transform hover:scale-105"
             >
               {t('enterLibrary')}
             </Link>

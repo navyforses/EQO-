@@ -20,17 +20,17 @@ const FigureCard: React.FC<FigureCardProps> = ({ figure }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       whileHover={{ scale: 1.02 }}
-      className={`bg-brand-aged-paper/60 rounded-lg p-6 transition-all duration-300 border border-brand-aged-gold/30 hover:border-brand-aged-gold/50 ${fontClass} relative overflow-hidden burnt-edge`}
+      className={`bg-brand-obsidian/60 rounded-lg p-6 transition-all duration-300 border border-brand-gold/20 hover:border-brand-gold/40 ${fontClass} relative overflow-hidden`}
     >
       {/* Ornamental corner */}
       <div className="absolute top-2 right-2 w-6 h-6 opacity-20">
-        <div className="w-full h-full bg-brand-aged-gold rounded-full"></div>
+        <div className="w-full h-full bg-brand-gold rounded-full"></div>
       </div>
       
       <Link to={`/figure/${figure.id}`} className="block relative z-10">
         <div className="space-y-4">
           {/* თქვენი ფოტოს გამოსაყენებლად */}
-          <div className="relative h-48 bg-gradient-to-br from-brand-aged-gold/20 to-brand-gold/10 rounded-lg overflow-hidden border border-brand-aged-gold/20">
+          <div className="relative h-48 bg-gradient-to-br from-brand-ink/40 to-brand-obsidian/60 rounded-lg overflow-hidden border border-brand-gold/20">
             {/* თქვენი ფოტო აქ */}
             <img 
               src={`/EQO-/images/${figure.id}.jpg`} 
@@ -46,9 +46,9 @@ const FigureCard: React.FC<FigureCardProps> = ({ figure }) => {
           </div>
           
           <div>
-            <h3 className="text-xl font-bold text-gray-800 mb-2 hover:text-brand-aged-gold transition-colors">{content.name}</h3>
-            <p className="text-brand-aged-gold/80 text-sm mb-2 font-semibold">{content.title}</p>
-            <p className="text-gray-600 text-xs">{content.era}</p>
+            <h3 className="text-xl font-bold text-brand-parchment mb-2 hover:text-brand-gold transition-colors">{content.name}</h3>
+            <p className="text-brand-gold/80 text-sm mb-2 font-semibold">{content.title}</p>
+            <p className="text-brand-parchment/70 text-xs">{content.era}</p>
           </div>
         </div>
       </Link>
