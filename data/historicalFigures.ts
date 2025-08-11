@@ -29,7 +29,7 @@ export const historicalFigures: HistoricalFigure[] = [
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3'
-      ]]]]]],
+      ]],
     }
   },
   {
@@ -60,7 +60,7 @@ export const historicalFigures: HistoricalFigure[] = [
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3'
-      ]]]]]],
+      ]],
     }
   },
   {
@@ -91,7 +91,7 @@ export const historicalFigures: HistoricalFigure[] = [
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3'
-      ]]]]]],
+      ]],
     }
   },
   {
@@ -122,7 +122,7 @@ export const historicalFigures: HistoricalFigure[] = [
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3'
-      ]]]]]],
+      ]],
     }
   },
   {
@@ -153,7 +153,7 @@ export const historicalFigures: HistoricalFigure[] = [
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3'
-      ]]]]]],
+      ]],
     }
   }
 ];
