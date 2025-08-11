@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:gh-pages": "node scripts/build-for-github-pages.js",
     "preview": "vite preview",
     "deploy": "node scripts/deploy.js",
     "deploy:quick": "node scripts/deploy.js '🚀 Quick update'",
