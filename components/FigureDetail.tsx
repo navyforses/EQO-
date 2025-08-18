@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import { historicalFigures } from '../data/historicalFigures';
 import { useLocale } from '../hooks/useLocale';
 import Chat from './Chat';
+import MapView from './MapView';
 import ArrowLeftIcon from './icons/ArrowLeftIcon';
 import ArrowRightIcon from './icons/ArrowRightIcon';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -39,7 +40,8 @@ const FigureDetail: React.FC = () => {
 
   const content = figure[language];
   const fontClass = language === 'ge' ? 'font-serif-ge' : 'font-serif-en';
-  const totalPages = 1 + (content.videoUrls?.length || 0);
+  const hasLocations = content.locations && content.locations.length > 0;
+  const totalPages = 1 + (content.videoUrls?.length || 0) + (hasLocations ? 1 : 0);
 
   const handlePageChange = (newIndex: number) => {
     if (newIndex === activePageIndex || newIndex < 0 || newIndex >= totalPages) return;
@@ -123,7 +125,7 @@ const FigureDetail: React.FC = () => {
                     style={{ transformOrigin: 'left center' }}
                   >
                     {activePageIndex === 0 && <Chat figure={figure} />}
-                    {activePageIndex > 0 && content.videoUrls?.[activePageIndex - 1] && (
+                    {activePageIndex > 0 && activePageIndex <= (content.videoUrls?.length || 0) && content.videoUrls?.[activePageIndex - 1] && (
                       <div className="w-full h-full bg-brand-aged-paper/50 rounded-lg p-4 flex flex-col border border-brand-aged-gold/30">
                         <h3 className={`text-xl font-bold text-gray-800 mb-4 ${fontClass}`}>{t('watchVideo')} #{activePageIndex}</h3>
                         <div className="text-xs text-gray-600 mb-2">Debug: {content.videoUrls[activePageIndex - 1]}</div>
@@ -137,6 +139,11 @@ const FigureDetail: React.FC = () => {
                             allowFullScreen
                           ></iframe>
                         </div>
+                      </div>
+                    )}
+                    {activePageIndex > (content.videoUrls?.length || 0) && hasLocations && (
+                      <div className="w-full h-full bg-brand-aged-paper/50 rounded-lg overflow-hidden border border-brand-aged-gold/30">
+                        <MapView locations={content.locations!} />
                       </div>
                     )}
                   </motion.div>

@@ -11,12 +11,26 @@ export const historicalFigures: HistoricalFigure[] = [
       description: 'საზოგადო მოღვაწე, მწერალი, პოეტი, პუბლიცისტი, პოლიტიკური და საზოგადო მოღვაწე.',
       bio: 'ილია ჭავჭავაძე იყო XIX საუკუნის საქართველოს ეროვნულ-განმათავისუფლებელი მოძრაობის ლიდერი. მისი მოღვაწეობა მიზნად ისახავდა ქართველი ერის სულიერ, კულტურულ და პოლიტიკურ გამოცოცხლებას. იგი ცნობილია, როგორც "ერის მამა".',
       era: 'XIX-XX საუკუნე',
-      videoUrls: [[
+      videoUrls: [
         'https://www.youtube.com/embed/ehI2ceiuhnM',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3'
-      ]],
+      ],
+      locations: [
+        {
+          name: 'Kvareli',
+          description: 'Birthplace',
+          lat: 41.9510,
+          lng: 45.8110,
+        },
+        {
+          name: 'Tbilisi',
+          description: 'Place of activity',
+          lat: 41.7151,
+          lng: 44.8271,
+        },
+      ],
     },
     en: {
       name: 'Ilia Chavchavadze',
@@ -24,12 +38,26 @@ export const historicalFigures: HistoricalFigure[] = [
       description: 'A public figure, writer, poet, publicist, political and social activist.',
       bio: 'Ilia Chavchavadze was the leader of the national liberation movement of Georgia in the 19th century. His work aimed at the spiritual, cultural, and political revival of the Georgian nation. He is known as the "Father of the Nation".',
       era: '19th-20th Century',
-      videoUrls: [[
+      videoUrls: [
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=0',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3'
-      ]],
+      ],
+      locations: [
+        {
+          name: 'Kvareli',
+          description: 'Birthplace',
+          lat: 41.9510,
+          lng: 45.8110,
+        },
+        {
+          name: 'Tbilisi',
+          description: 'Place of activity',
+          lat: 41.7151,
+          lng: 44.8271,
+        },
+      ],
     }
   },
   {
@@ -42,12 +70,12 @@ export const historicalFigures: HistoricalFigure[] = [
       description: 'გენიალური ქართველი პოეტი, მწერალი და მოაზროვნე, რომელმაც შექმნა უნიკალური პოეტური სამყარო.',
       bio: 'ლუკა რაზიკაშვილი, ცნობილი როგორც ვაჟა-ფშაველა, თავის შემოქმედებაში ასახავდა ადამიანისა და ბუნების ურთიერთობას, გმირობასა და ღირსებას. მისი პოემები "ალუდა ქეთელაური" და "სტუმარ-მასპინძელი" ქართული ლიტერატურის შედევრებია.',
       era: 'XIX-XX საუკუნე',
-      videoUrls: [[
+      videoUrls: [
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=0',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3'
-      ]],
+      ],
     },
     en: {
       name: 'Vazha-Pshavela',
@@ -55,12 +83,12 @@ export const historicalFigures: HistoricalFigure[] = [
       description: 'A brilliant Georgian poet, writer, and thinker who created a unique poetic world.',
       bio: 'Luka Razikashvili, known as Vazha-Pshavela, reflected on the relationship between man and nature, heroism, and dignity in his work. His poems "Aluda Ketelauri" and "Host and Guest" are masterpieces of Georgian literature.',
       era: '19th-20th Century',
-      videoUrls: [[
+      videoUrls: [
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=0',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3'
-      ]],
+      ],
     }
   },
   {
@@ -73,12 +101,12 @@ export const historicalFigures: HistoricalFigure[] = [
       description: 'ქართველი პუბლიცისტი, კრიტიკოსი, პოლიტიკური მოღვაწე და ეკონომისტი.',
       bio: 'ნიკო ნიკოლაძე იყო პროგრესული იდეების მატარებელი, რომელმაც მნიშვნელოვანი წვლილი შეიტანა საქართველოს ეკონომიკურ და სოციალურ განვითარებაში. იგი იბრძოდა ქვეყნის მოდერნიზაციისა და ევროპულ ღირებულებებთან დაახლოებისთვის.',
       era: 'XIX-XX საუკუნე',
-      videoUrls: [[
+      videoUrls: [
         'https://www.youtube.com/embed/ohfFiz-Tm_U?si=D-N1SkSSmzfc-6th',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3'
-      ]],
+      ],
     },
     en: {
       name: 'Niko Nikoladze',
@@ -86,12 +114,12 @@ export const historicalFigures: HistoricalFigure[] = [
       description: 'Georgian publicist, critic, political figure, and economist.',
       bio: 'Niko Nikoladze was a carrier of progressive ideas who made a significant contribution to the economic and social development of Georgia. He fought for the country\'s modernization and rapprochement with European values.',
       era: '19th-20th Century',
-      videoUrls: [[
+      videoUrls: [
         'https://www.youtube.com/embed/ohfFiz-Tm_U?si=D-N1SkSSmzfc-6th',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3'
-      ]],
+      ],
     }
   },
   {
@@ -104,12 +132,12 @@ export const historicalFigures: HistoricalFigure[] = [
       description: 'XII საუკუნის დიდი ქართველი პოეტი, ავტორი მსოფლიო ლიტერატურის შედევრის "ვეფხისტყაოსანი".',
       bio: 'შოთა რუსთაველის ცხოვრების შესახებ მცირე ცნობები მოიპოვება, თუმცა მისი პოემა "ვეფხისტყაოსანი" ქართული კულტურის უმნიშვნელოვანესი ნაწილია. იგი ჰუმანიზმის, მეგობრობისა და სიყვარულის იდეალებს ქადაგებს.',
       era: 'XII საუკუნე',
-      videoUrls: [[
+      videoUrls: [
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=0',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3'
-      ]],
+      ],
     },
     en: {
       name: 'Shota Rustaveli',
@@ -117,12 +145,12 @@ export const historicalFigures: HistoricalFigure[] = [
       description: 'A great 12th-century Georgian poet, author of the world literature masterpiece "The Knight in the Panther\'s Skin".',
       bio: 'Little is known about Shota Rustaveli\'s life, but his poem "The Knight in the Panther\'s Skin" is the most important part of Georgian culture. It preaches the ideals of humanism, friendship, and love.',
       era: '12th Century',
-      videoUrls: [[
+      videoUrls: [
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=0',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3'
-      ]],
+      ],
     }
   },
   {
@@ -135,12 +163,12 @@ export const historicalFigures: HistoricalFigure[] = [
       description: 'საქართველოს მეფე 1089-1125 წლებში, რომელმაც ქვეყანა გააერთიანა და გააძლიერა.',
       bio: 'დავით IV აღმაშენებელი იყო გენიალური სამხედრო სტრატეგოსი და რეფორმატორი. მისი მმართველობის პერიოდი "ოქროს ხანად" იწოდება საქართველოს ისტორიაში. დიდგორის ბრძოლაში (1121) გამარჯვებით მან ქვეყნის მომავალი უზრუნველყო.',
       era: 'XI-XII საუკუნე',
-      videoUrls: [[
+      videoUrls: [
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=0',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3'
-      ]],
+      ],
     },
     en: {
       name: 'David the Builder',
@@ -148,12 +176,12 @@ export const historicalFigures: HistoricalFigure[] = [
       description: 'King of Georgia from 1089 to 1125, who united and strengthened the country.',
       bio: 'David IV the Builder was a brilliant military strategist and reformer. His reign is called the "Golden Age" in the history of Georgia. With the victory in the Battle of Didgori (1121), he secured the future of the country.',
       era: '11th-12th Century',
-      videoUrls: [[
+      videoUrls: [
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=0',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=1',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=2',
         'https://www.youtube.com/embed/dQw4w9WgXcQ?v=3'
-      ]],
+      ],
     }
   }
 ];
