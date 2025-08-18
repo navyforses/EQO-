@@ -8,6 +8,7 @@ export interface LocalizedContent {
   bio: string;
   era: string;
   videoUrls: string[];
+  locations?: Location[];
 }
 
 export interface HistoricalFigure {
@@ -21,4 +22,11 @@ export interface HistoricalFigure {
 export interface ChatMessage {
     sender: 'user' | 'ai';
     text: string;
+}
+
+export interface Location {
+  name: string;
+  description: string;
+  lat: number;
+  lng: number;
 }
